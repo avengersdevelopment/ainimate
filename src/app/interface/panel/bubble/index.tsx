@@ -99,7 +99,7 @@ export function Bubble({ children, onChange }: {
       )}>
         <ContentEditable
           html={text.current}
-          className="line-clamp-3"
+          className="line-clamp-4"
           onBlur={handleBlur}
           onChange={handleChange} 
         />
