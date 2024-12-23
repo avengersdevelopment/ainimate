@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --foreground-black: black;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+* {
+  @apply scroll-smooth;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #221622;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #FA8BFF;
+  border-radius:20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #FBA6FF;
+}
+
+body {
+  color: rgb(var(--foreground-black));
+  /* cursor: url("/assets/images/landing/hand.png"), auto; */
+
+}
+
+.cursor-hover {
+  /* cursor: url("/assets/images/landing/hand_clicked.png"), auto; */
+}
+
+
+
+/* this is the trick to bypass the style={{}} attribute when printing */
+@media print {
+  .comic-page,
+  .comic-page[style] {
+    width: 100vw !important;
+    page-break-before: always;
+  }
+}
+
+.render-to-image .comic-panel {
+  height: auto !important;
+  /* max-width: fit-content !important; */
+}
+
+.animated-bg {
+  animation: rotateScaleOpacity 6s infinite;
+}
+
+@keyframes rotateScaleOpacity {
+  0%,
+  100% {
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: rotate(20deg) scale(1.2);
+    opacity: 0.6;
+  }
+}
