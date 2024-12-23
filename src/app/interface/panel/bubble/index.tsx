@@ -52,7 +52,7 @@ export function Bubble({ children, onChange }: {
       <div
         ref={ref}
         className={cn(
-        `bg-stone-50`,
+        `bg-stone-50 text-black`,
         `border-stone-800`,
         `transition-all duration-200 ease-in-out`,
         zoomLevel > 140 ? `border-[1.5px] md:border-[2px]` :
