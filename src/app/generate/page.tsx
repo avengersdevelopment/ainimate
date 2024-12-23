@@ -231,10 +231,10 @@ export default function GeneratePage() {
 
   useEffect(() => {
     if (!isGeneratingStory && isSubmittedStory) {
-      router.push("/result");
       setTimeout(() => {
         setIsLoading(false);
-      }, 6500);
+      }, 1000);
+      router.push("/result");
     }
   }, [isGeneratingStory, isSubmittedStory, router]);
 

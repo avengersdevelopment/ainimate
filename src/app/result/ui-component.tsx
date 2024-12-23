@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import ComicPanel from "./component/ComicPanel";
 import SummaryText from "./component/SummaryText";
@@ -25,14 +26,14 @@ export default function ResultUIComponent(props: ResultProps) {
       </div>
 
       {/* Back Button */}
-      <Button
-        className="fixed top-18 left-16 bg-transparent text-[#FDDAFF] text-xl font-monumenExtended hover:bg-transparent hover:text-white"
-        onClick={() => {router.push("/generate")
-        }}
+      <Link href={"/generate"}
+        className="fixed top-18 left-16 bg-transparent flex text-[#FDDAFF] text-xl font-monumenExtended hover:bg-transparent hover:text-white"
+       
+ 
       >
         <Image src={"/assets/images/result-page/back-icon.svg"} alt="Back Button" className="mr-4" width="17" height="25" />
         BACK
-      </Button>
+      </Link>
 
       {/* Card */}
       <div
