@@ -105,7 +105,7 @@ export function Panel({
     );
 
   let delay = enableRateLimiter ? 1000 + 500 * panelIndex : 1000;
-  let longDelay = 3000;
+  let longDelay = 1000;
 
   const addSpeechBubble = async () => {
     if (!renderedRef.current) {
