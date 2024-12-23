@@ -21,7 +21,7 @@ export default function SummaryText(props: ResultProps) {
       </h1>
 
       {/* Description (using ScrollArea if desired) */}
-      <ScrollArea className="h-[36vh] max-h-[36vh]">
+      <ScrollArea className="h-[30vh] max-h-[36vh]">
         <p className="text-[#FDDAFF] text-xl leading-tight font-encodeSans">
           {props.summary.description}
         </p>

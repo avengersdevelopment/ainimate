@@ -56,11 +56,15 @@ export default function Footer() {
                   Social Media{" "}
                 </span>
                 <div className="font-encodeSans flex flex-col gap-1">
-                  <Link href={"#"} className="hover:underline">
-                    X
-                  </Link>
-                  <Link href={"#"} className="hover:underline">
-                    Developer
+                  <Link
+                    href={
+                      process.env.NEXT_PUBLIC_X_URL ??
+                      "https://x.com/ainimate_ai"
+                    }
+                    target="_blank"
+                    className="hover:underline"
+                  >
+                    X 
                   </Link>
                 </div>
               </div>

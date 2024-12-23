@@ -12,15 +12,19 @@ export const metadata: Metadata = {
     apple: "/favicon/favicon-32x32.png", // Path to Apple-specific favicon
   },
   alternates: {
-    canonical: "/",
+    canonical: "https://www.ainimate.io/",
   },
   openGraph: {
     title: SITE_CONFIG.title,
     description: SITE_CONFIG.description,
+    url: SITE_CONFIG.url,
     images: [
       {
-        url: "/banner.png",
+        url: "https://ainimate.io/banner.jpg",
+        width: 1200,
+        height: 630,
         alt: "AINIMATE - Create Comics with AI",
+        type: "image/jpg",
       },
     ],
   },

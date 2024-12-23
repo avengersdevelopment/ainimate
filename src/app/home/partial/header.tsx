@@ -20,32 +20,50 @@ export default function Header() {
             <img className="w-full" src="/assets/home/AINIMATE.svg" alt="" />
           </div>
           <div className="flex justify-center items-center gap-10 w-full uppercase font-sora">
-            {links.map((link, index) => (
-              <Link
-                href={link.url ?? ""}
-                className="hover:text-[#FA8BFF] group p-2  transition duration-300 relative"
-                key={index}
-              >
-                <div>{link.name}</div>
-                <Image
-                  height={10}
-                  width={10}
-                  className="absolute -translate-x-0 -translate-y-5 group-hover:-translate-x-4 group-hover:-translate-y-8 group-hover:opacity-100 opacity-20 transition duration-300"
-                  src="/assets/home/corner.svg"
-                  alt=""
-                />
-                <Image
-                  height={10}
-                  width={10}
-                  className="absolute -translate-x-2 right-0 -translate-y-4 group-hover:translate-x-2 group-hover:-translate-y-0 rotate-180 group-hover:opacity-100 opacity-0 transition duration-300"
-                  src="/assets/home/corner.svg"
-                  alt=""
-                />
-              </Link>
-            ))}
+            <Link
+              href={links?.[0].url ?? ""}
+              className="hover:text-[#FA8BFF] group p-2  transition duration-300 relative"
+            >
+              <div>{links?.[0].name}</div>
+              <Image
+                height={10}
+                width={10}
+                className="absolute -translate-x-0 -translate-y-5 group-hover:-translate-x-4 group-hover:-translate-y-8 group-hover:opacity-100 opacity-20 transition duration-300"
+                src="/assets/home/corner.svg"
+                alt=""
+              />
+              <Image
+                height={10}
+                width={10}
+                className="absolute -translate-x-2 right-0 -translate-y-4 group-hover:translate-x-2 group-hover:-translate-y-0 rotate-180 group-hover:opacity-100 opacity-0 transition duration-300"
+                src="/assets/home/corner.svg"
+                alt=""
+              />
+            </Link>
+            <Link
+              href={links?.[1].url ?? ""}
+              target="_blank"
+              className="hover:text-[#FA8BFF] group p-2  transition duration-300 relative"
+            >
+              <div>{links?.[1].name}</div>
+              <Image
+                height={10}
+                width={10}
+                className="absolute -translate-x-0 -translate-y-5 group-hover:-translate-x-4 group-hover:-translate-y-8 group-hover:opacity-100 opacity-20 transition duration-300"
+                src="/assets/home/corner.svg"
+                alt=""
+              />
+              <Image
+                height={10}
+                width={10}
+                className="absolute -translate-x-2 right-0 -translate-y-4 group-hover:translate-x-2 group-hover:-translate-y-0 rotate-180 group-hover:opacity-100 opacity-0 transition duration-300"
+                src="/assets/home/corner.svg"
+                alt=""
+              />
+            </Link>
           </div>
 
-          <div className="absolute right-[42px] top-[-16px]">
+          <div className="absolute right-[42px] top-[-14px]">
             <Link
               href={process.env.NEXT_PUBLIC_PUMP_FUN_URL ?? ""}
               target="_blank"
